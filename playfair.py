@@ -60,7 +60,7 @@ def encrypt(plaintext, key):
 
         if row1 == row2:  # Same row
             plain += key_matrix[row1][(col1 - 1) % 5]
-            plain += key_matrix[row2][(col2 + 1) % 5]
+            plain += key_matrix[row2][(col2 - 1) % 5]
         elif col1 == col2:  # Same column
             plain += key_matrix[(row1 - 1) % 5][col1]
             plain += key_matrix[(row2 - 1) % 5][col2]
